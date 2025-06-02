@@ -48,7 +48,7 @@ Bank Churn:A csv file provided by the organisation ,which contains the relevant 
 
 
 ### Data Visualisation
-1. Create a DAX Measure Table containing calculations for report visualizations.
+1. Create a DAX Measures Table containing calculations for report visualizations.
 2. Design the report theme.
 3. Select appropriate visualizations and format them according to the theme.
 4. Conduct testing on the report.

@@ -54,7 +54,8 @@ Bank Churn:A csv file provided by the organisation ,which contains the relevant 
 4. Conduct testing on the report.
 
    ### *Dashboard*
-<img width="1529" height="560" alt="image" src="https://github.com/user-attachments/assets/f87b9d54-63c2-4f31-8f9a-3ab25286dfb8" />
+<img width="1534" height="517" alt="image" src="https://github.com/user-attachments/assets/c65e3a92-7686-42c3-bde8-996fcc570232" />
+
 
 
 

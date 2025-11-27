@@ -56,7 +56,8 @@ Bank Churn:A csv file provided by the organisation ,which contains the relevant 
    ### *Dashboard*
 <img width="1583" height="679" alt="image" src="https://github.com/user-attachments/assets/4f235716-044c-451f-bfb6-68bd2fd6a042" />
 
-
+### *Dashboard Link*
+https://app.powerbi.com/view?r=eyJrIjoiNjhlN2NlNzMtNGI5Yi00N2NhLTlhNmQtNzJjZDQwOTViZDY4IiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9&pageName=9ef621252117e04aec24
 
 
 

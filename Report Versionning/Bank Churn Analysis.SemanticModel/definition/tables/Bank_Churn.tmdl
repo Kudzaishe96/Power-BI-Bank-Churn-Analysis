@@ -75,7 +75,7 @@ table Bank_Churn
 		dataType: int64
 		formatString: 0
 		lineageTag: fbbfcc6f-832f-43c6-a376-a725927e8b25
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: NumOfProducts
 
 		annotation SummarizationSetBy = Automatic
@@ -123,6 +123,14 @@ table Bank_Churn
 
 		annotation SummarizationSetBy = Automatic
 
+	column CreditScoreGroup
+		dataType: string
+		lineageTag: d38d71ab-ba59-4e45-872d-b507a7c75239
+		summarizeBy: none
+		sourceColumn: CreditScoreGroup
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Bank_Churn = m
 		mode: import
 		source =
@@ -134,9 +142,10 @@ table Bank_Churn
 				    #"Replaced HasCrCard value 0 with NoCard" = Table.ReplaceValue(#"Replaced HasCard value 1 with HasCard","0","NoCard",Replacer.ReplaceText,{"HasCrCard"}),
 				    #"Replaced Exited Value 1 with Churned" = Table.ReplaceValue(#"Replaced HasCrCard value 0 with NoCard","1","Churned",Replacer.ReplaceText,{"Exited"}),
 				    #"Replaced Exited value 0 with Active" = Table.ReplaceValue(#"Replaced Exited Value 1 with Churned","0","Active",Replacer.ReplaceText,{"Exited"}),
-				    #"Age Grouping" = Table.AddColumn(#"Replaced Exited value 0 with Active", "AgeGroups", each if [Age] < 30 then "Young Adults" else if [Age] < 45 then "Adults" else if [Age] < 65 then "Middle Aged Adults" else "Seniors")
+				    #"Age Grouping" = Table.AddColumn(#"Replaced Exited value 0 with Active", "AgeGroups", each if [Age] < 30 then "Young Adults" else if [Age] < 45 then "Adults" else if [Age] < 65 then "Middle Aged Adults" else "Seniors"),
+				    #"Credit Score Grouping" = Table.AddColumn(#"Age Grouping", "CreditScoreGroup", each if [CreditScore] <= 499 then "Poor" else if [CreditScore] <= 649 then "Fair" else if [CreditScore] <= 749 then "Good" else "Excellent")
 				in
-				    #"Age Grouping"
+				    #"Credit Score Grouping"
 
 	annotation PBI_NavigationStepName = Navigation
 

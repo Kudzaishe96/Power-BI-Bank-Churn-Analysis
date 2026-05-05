@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "d31cde78a57bc80cca87",
+  "position": {
+    "x": 1269.9871019615068,
+    "y": 518.69813564716321,
+    "z": 3,
+    "height": 520.75646158227107,
+    "width": 596.91452118125926,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bank_Churn"
+                    }
+                  },
+                  "Property": "Geography"
+                }
+              },
+              "queryRef": "Bank_Churn.Geography",
+              "nativeQueryRef": "Geography",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Churned Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Total Churned Clients"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapStyles": [
+        {
+          "properties": {
+            "mapTheme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'canvasDark'"
+                }
+              }
+            },
+            "showLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d4e7c460c4c888871bbc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Bank_Churn"
+              }
+            },
+            "Property": "Geography"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c4664f2c96d0157c0211",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Churned Clients"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

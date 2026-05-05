@@ -1,0 +1,31 @@
+table 'Age Catergory'
+	lineageTag: 8d9e07df-b100-402f-bc19-d1efee63e9f2
+
+	column AgeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 902fa81c-9604-4ba0-a7be-b4be1340c2ae
+		summarizeBy: none
+		sourceColumn: AgeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgeCategory
+		dataType: string
+		lineageTag: c8ebd677-9ce8-41af-ad74-c45789d672ea
+		summarizeBy: none
+		sourceColumn: AgeCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Age Catergory' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUYrML81LV3BMKc0pKVaK1YlWMgIK+mampOSkKjimp6YgSxkDpZC4JkBucGpeZn4RkB8LAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [AgeId = _t, AgeCategory = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"AgeId", Int64.Type}, {"AgeCategory", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "826632bba40c7d080197",
+  "position": {
+    "x": 885.08015209635,
+    "y": 310.80721620127639,
+    "z": 7,
+    "height": 273.75734936933617,
+    "width": 279.93232717465952,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Churned Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Total Churned Clients"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Active Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Active Clients",
+              "nativeQueryRef": "Total Active Clients"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations"
+                  }
+                },
+                "Property": "Total Churned Clients"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "610a191a094b696dca00",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Churned Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8709e809801130b26ab5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Active Clients"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

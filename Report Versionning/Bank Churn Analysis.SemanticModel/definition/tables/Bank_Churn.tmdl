@@ -1,0 +1,144 @@
+table Bank_Churn
+	lineageTag: bcd1bb1b-6fc5-465d-bf4a-f2d4afa250c9
+
+	column CustomerId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e5f3a9d-83ca-4b7a-8bed-465b783d7bdb
+		summarizeBy: count
+		sourceColumn: CustomerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Surname
+		dataType: string
+		lineageTag: a6de0d67-1bb6-4273-99f0-a03a37c97725
+		summarizeBy: none
+		sourceColumn: Surname
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditScore
+		dataType: int64
+		formatString: 0
+		lineageTag: c521a8f7-a763-4546-b7dc-5571f1dd5733
+		summarizeBy: sum
+		sourceColumn: CreditScore
+
+		annotation SummarizationSetBy = Automatic
+
+	column Geography
+		dataType: string
+		lineageTag: 5f13c71f-f99a-4605-b215-d47962950c2e
+		summarizeBy: none
+		sourceColumn: Geography
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 20a44844-e632-4c71-8be8-9158a6d9675d
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b9e671a-b6db-43d9-8cdb-09464fbd6e29
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tenure
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e8bcc1d-883b-43c9-8288-37c05f369eed
+		summarizeBy: sum
+		sourceColumn: Tenure
+
+		annotation SummarizationSetBy = Automatic
+
+	column Balance
+		dataType: double
+		lineageTag: d3ccf4ac-8079-46c0-80ea-720c4bcec519
+		summarizeBy: sum
+		sourceColumn: Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumOfProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: fbbfcc6f-832f-43c6-a376-a725927e8b25
+		summarizeBy: sum
+		sourceColumn: NumOfProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasCrCard
+		dataType: string
+		lineageTag: 676fec23-e67f-4400-aa25-7c6dac338eda
+		summarizeBy: none
+		sourceColumn: HasCrCard
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActiveMember
+		dataType: int64
+		formatString: 0
+		lineageTag: cc7e2522-5cdc-4971-bc23-e09b98941188
+		summarizeBy: sum
+		sourceColumn: IsActiveMember
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedSalary
+		dataType: double
+		lineageTag: f7e75325-3cdc-411b-9543-ee71929a316b
+		summarizeBy: sum
+		sourceColumn: EstimatedSalary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Exited
+		dataType: string
+		lineageTag: 9f8be691-388f-4836-98b5-9ba5bfd6e605
+		summarizeBy: none
+		sourceColumn: Exited
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgeGroups
+		dataType: string
+		lineageTag: 3bee808e-a235-4562-9e2b-d002997e52a5
+		summarizeBy: none
+		sourceColumn: AgeGroups
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Bank_Churn = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\gabri\Desktop\Github Repos\Churn Analysis\Power-BI-Bank-Churn-Analysis\Bank Churn Source\Bank_Churn.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CustomerId", Int64.Type}, {"Surname", type text}, {"CreditScore", Int64.Type}, {"Geography", type text}, {"Gender", type text}, {"Age", Int64.Type}, {"Tenure", Int64.Type}, {"Balance", type number}, {"NumOfProducts", Int64.Type}, {"HasCrCard", type text}, {"IsActiveMember", Int64.Type}, {"EstimatedSalary", type number}, {"Exited", type text}}),
+				    #"Replaced HasCard value 1 with HasCard" = Table.ReplaceValue(#"Changed Type","1","HasCard",Replacer.ReplaceText,{"HasCrCard"}),
+				    #"Replaced HasCrCard value 0 with NoCard" = Table.ReplaceValue(#"Replaced HasCard value 1 with HasCard","0","NoCard",Replacer.ReplaceText,{"HasCrCard"}),
+				    #"Replaced Exited Value 1 with Churned" = Table.ReplaceValue(#"Replaced HasCrCard value 0 with NoCard","1","Churned",Replacer.ReplaceText,{"Exited"}),
+				    #"Replaced Exited value 0 with Active" = Table.ReplaceValue(#"Replaced Exited Value 1 with Churned","0","Active",Replacer.ReplaceText,{"Exited"}),
+				    #"Age Grouping" = Table.AddColumn(#"Replaced Exited value 0 with Active", "AgeGroups", each if [Age] < 30 then "Young Adults" else if [Age] < 45 then "Adults" else if [Age] < 65 then "Middle Aged Adults" else "Seniors")
+				in
+				    #"Age Grouping"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

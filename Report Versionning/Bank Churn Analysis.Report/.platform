@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Bank Churn Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0fca19a3-f57a-4d41-9e65-d17b8c56fb42"
+  }
+}

@@ -1,0 +1,31 @@
+table Accounts
+	lineageTag: 1022dc2d-4bc9-4c82-b8dd-e4557a628a75
+
+	column AccountId
+		dataType: int64
+		formatString: 0
+		lineageTag: cd081f0b-372b-464e-9e9d-d86299f2f417
+		summarizeBy: none
+		sourceColumn: AccountId
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfAccounts
+		dataType: string
+		lineageTag: c2b6935f-6671-45f4-9b08-b7c78358a269
+		summarizeBy: none
+		sourceColumn: NumberOfAccounts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Accounts = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfLPS1VwTE7OL80rUYrViVYyAoqFlOfDxIrBgsYgwYyi1FRUYROgsFt+aRGSaCwA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [AccountId = _t, NumberOfAccounts = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"AccountId", Int64.Type}, {"NumberOfAccounts", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

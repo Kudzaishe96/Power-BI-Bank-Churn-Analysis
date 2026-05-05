@@ -1,0 +1,12 @@
+relationship 5a35de34-bbd5-95d2-e2e5-5f1a7017ae30
+	fromColumn: Bank_Churn.AgeGroups
+	toColumn: 'Age Catergory'.AgeCategory
+
+relationship e4de15b4-7070-2cb6-57a6-8fea809dcb64
+	fromColumn: Bank_Churn.NumOfProducts
+	toColumn: Accounts.AccountId
+
+relationship 436331d0-5398-b1f7-2c8f-68f117e30dd8
+	fromColumn: Bank_Churn.CreditScoreGroup
+	toColumn: CreditScore.CreditScoreGroup
+

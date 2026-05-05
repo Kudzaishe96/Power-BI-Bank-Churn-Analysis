@@ -1,0 +1,135 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "425701a6c05817d17e87",
+  "position": {
+    "x": 448.71505385349838,
+    "y": 296.39893465552188,
+    "z": 10,
+    "height": 726.58905509305009,
+    "width": 351.97373490343222,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CreditScore"
+                    }
+                  },
+                  "Property": "CreditScoreGroup"
+                }
+              },
+              "queryRef": "CreditScore.CreditScoreGroup",
+              "nativeQueryRef": "CreditScoreGroup",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Churned Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Total Churned Clients"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Active Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Active Clients",
+              "nativeQueryRef": "Total Active Clients"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations"
+                  }
+                },
+                "Property": "Total Churned Clients"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4f1f03e8a4e1845ea88a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Churned Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3342c8ae29a6248a71ee",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Active Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e819ef10d8569b762488",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CreditScore"
+              }
+            },
+            "Property": "CreditScoreGroup"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "1386ce44ba42c260748e",
+  "position": {
+    "x": 32.933214961724651,
+    "y": 691.59751419621773,
+    "z": 9,
+    "height": 374.61532018961793,
+    "width": 415.7818388917737,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Accounts"
+                    }
+                  },
+                  "Property": "NumberOfAccounts"
+                }
+              },
+              "queryRef": "Accounts.NumberOfAccounts",
+              "nativeQueryRef": "NumberOfAccounts",
+              "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": []
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Churned Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Total Churned Clients"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Active Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Active Clients",
+              "nativeQueryRef": "Total Active Clients"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Calculations"
+                  }
+                },
+                "Property": "Total Churned Clients"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "673c1615a7cd81e31ba0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Churned Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6dd90a3651d2e328b3c8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Active Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fd457f80189d90c61c43",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Accounts"
+              }
+            },
+            "Property": "NumberOfAccounts"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

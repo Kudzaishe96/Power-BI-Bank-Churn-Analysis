@@ -8,11 +8,15 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Bank_Churn"]
+annotation PBI_QueryOrder = ["Bank_Churn","Calculations","Age Catergory","Accounts","CreditScore"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table Bank_Churn
+ref table Calculations
+ref table 'Age Catergory'
+ref table Accounts
+ref table CreditScore
 
 ref cultureInfo en-US
 

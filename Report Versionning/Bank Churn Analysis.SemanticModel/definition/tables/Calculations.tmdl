@@ -1,0 +1,61 @@
+table Calculations
+	lineageTag: fbc5393d-2cfb-497e-b474-6e7487d2eea0
+
+	measure 'Total Clients' = DISTINCTCOUNT(Bank_Churn[CustomerId])
+		formatString: 0
+		lineageTag: 65da481f-7731-423b-9591-468714a4ac62
+
+	measure 'Total Active Clients' = CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Exited]=="Active")
+		formatString: 0
+		lineageTag: fa4519cc-c52b-4093-a8d0-0bd71a8c7af7
+
+	measure 'Total Churned Clients' = CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Exited]=="Churned")
+		formatString: 0
+		lineageTag: 5e589174-4aa0-488c-9998-89c68287f68e
+
+	measure 'Churn Rate%' = ```
+			
+			    VAR Total_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),ALL(Bank_Churn)
+			                                )
+			    
+			    VAR Exited_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Exited] == "Churned"
+			                                )
+			
+			    RETURN
+			    DIVIDE(Exited_Clients,Total_Clients,0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8e94b39c-dd08-4513-9d4c-05cc6a586505
+
+	measure 'AVG Salary' = AVERAGEX(Bank_Churn,Bank_Churn[EstimatedSalary])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c89fa489-3d25-49d4-b34b-229e28e7cb1c
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'AVG Balance' = AVERAGEX(Bank_Churn,Bank_Churn[Balance])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 43e99662-391b-4d78-a48f-c387ccbd8103
+
+	measure Males = CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Gender] == "Male")
+		formatString: 0
+		lineageTag: 88673535-b411-4123-8ab8-a45e873b391c
+
+	measure Females = CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Gender] == "Female")
+		formatString: 0
+		lineageTag: 534f9b66-f096-4ee9-9c1a-57f27031e270
+
+	partition Calculations = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

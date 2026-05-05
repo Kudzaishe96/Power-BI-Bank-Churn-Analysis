@@ -1,0 +1,181 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "4180a625a890006bc980",
+  "position": {
+    "x": 32.933214961724651,
+    "y": 236.70748253739592,
+    "z": 2,
+    "height": 471.35663913968409,
+    "width": 415.7818388917737,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Age Catergory"
+                    }
+                  },
+                  "Property": "AgeCategory"
+                }
+              },
+              "queryRef": "Age Catergory.AgeCategory",
+              "nativeQueryRef": "AgeCategory",
+              "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Age Catergory"
+                        }
+                      },
+                      "Property": "AgeId"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "CountNonNull(Age Catergory.AgeId)",
+              "nativeQueryRef": "Sum of AgeId"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Churned Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Total Churned Clients"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Total Active Clients"
+                }
+              },
+              "queryRef": "Calculations.Total Active Clients",
+              "nativeQueryRef": "Total Active Clients"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Age Catergory"
+                      }
+                    },
+                    "Property": "AgeId"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9126c41689427cc9a551",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Churned Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "92608a8775051bc2d9cc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Total Active Clients"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8ba6c53a094081546333",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Age Catergory"
+              }
+            },
+            "Property": "AgeCategory"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "81e78201480e2460232b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Age Catergory"
+                  }
+                },
+                "Property": "AgeId"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

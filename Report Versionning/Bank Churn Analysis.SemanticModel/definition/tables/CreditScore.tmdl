@@ -1,0 +1,33 @@
+table CreditScore
+	lineageTag: ec1b5f03-7d29-4fa9-9961-b7da41e500df
+
+	column CreditScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f95ac3e-5141-481f-853a-a59c07f2eb93
+		summarizeBy: none
+		sourceColumn: CreditScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditScoreGroup
+		dataType: string
+		lineageTag: 8568d00b-943b-4eb4-8982-db2a3097d0db
+		summarizeBy: none
+		sourceColumn: CreditScoreGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CreditScore = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUQrIzy9SitWJVjICctwSMyEcYyDHPT8/BcwxAXJcK5JTc3JS80qUYmMB", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [CreditScoreId = _t, CreditScoreGroup = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"CreditScoreId", Int64.Type}, {"CreditScoreGroup", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

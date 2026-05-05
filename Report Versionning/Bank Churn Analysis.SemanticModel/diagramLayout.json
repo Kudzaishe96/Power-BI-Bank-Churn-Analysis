@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 502.5,
+            "y": 0
+          },
+          "nodeIndex": "Bank_Churn",
+          "nodeLineageTag": "bcd1bb1b-6fc5-465d-bf4a-f2d4afa250c9",
+          "size": {
+            "height": 469,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 65,
+            "y": 0
+          },
+          "nodeIndex": "Calculations",
+          "nodeLineageTag": "fbc5393d-2cfb-497e-b474-6e7487d2eea0",
+          "size": {
+            "height": 317.75,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 281.75,
+            "y": 309.75
+          },
+          "nodeIndex": "Age Catergory",
+          "nodeLineageTag": "8d9e07df-b100-402f-bc19-d1efee63e9f2",
+          "size": {
+            "height": 290,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 838.25,
+            "y": 92.25
+          },
+          "nodeIndex": "Accounts",
+          "nodeLineageTag": "1022dc2d-4bc9-4c82-b8dd-e4557a628a75",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 848.74999618530273,
+            "y": 388.5
+          },
+          "nodeIndex": "CreditScore",
+          "nodeLineageTag": "ec1b5f03-7d29-4fa9-9961-b7da41e500df",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

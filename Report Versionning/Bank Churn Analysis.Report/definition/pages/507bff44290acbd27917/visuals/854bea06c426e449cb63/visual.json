@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "854bea06c426e449cb63",
+  "position": {
+    "x": 1634.3107924755859,
+    "y": 47.341496507479185,
+    "z": 6,
+    "height": 113.2079264309285,
+    "width": 218.18254912142581,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bank_Churn"
+                    }
+                  },
+                  "Property": "Tenure"
+                }
+              },
+              "queryRef": "Bank_Churn.Tenure",
+              "nativeQueryRef": "Tenure",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3fc079ce83d03a1187b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Bank_Churn"
+              }
+            },
+            "Property": "Tenure"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

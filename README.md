@@ -14,14 +14,19 @@ Customer Bank Churn Analysis
 
 ### Project Overview
 
-This project seeks to deliver insights about the Banks Customers
+The project aims to analyze customer churn behavior and its relationship with credit card ownership, age groups, and exit status. The goal is to provide actionable insights for retention strategies, helping stakeholders identify risk factors and improve customer engagement.
+
 
 
 ### Data Source
-Bank Churn:A csv file provided by the organisation ,which contains the relevant data for analysis and comparison.
+The analysis is based on the Bank Churn dataset, provided as a CSV file located in the Bank Churn Source folder within this repository. This dataset contains the relevant customer information required for churn analysis and comparative insights
 
-### Tools
-- Power BI : Data Extraction ,Data Cleaning, Data Modelling, Data Visualisation.
+
+### Tools & Technologies
+- Power BI – for interactive dashboards and visual storytelling.
+- Data Modeling – structured relationships between customer demographics, churn status, and credit card indicators.
+- DAX Measures – custom calculations for churn rates, age segmentation, and card ownership trends.
+
 
 
 ### Data Extraction and Cleaning

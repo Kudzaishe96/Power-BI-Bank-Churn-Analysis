@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "854bea06c426e449cb63",
+  "name": "a89135717bd9de84441a",
   "position": {
-    "x": 1496,
-    "y": 86,
-    "z": 6,
-    "height": 130,
-    "width": 274,
-    "tabOrder": 6
+    "x": 1634,
+    "y": 230,
+    "z": 11,
+    "height": 158,
+    "width": 188,
+    "tabOrder": 11
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
         "Values": {
@@ -23,35 +23,57 @@
                       "Entity": "Bank_Churn"
                     }
                   },
-                  "Property": "Tenure"
+                  "Property": "IsActiveMember"
                 }
               },
-              "queryRef": "Bank_Churn.Tenure",
-              "nativeQueryRef": "Tenure",
-              "active": true
+              "queryRef": "Bank_Churn.IsActiveMember",
+              "nativeQueryRef": "IsActiveMember"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
+      "fillCustom": [
         {
           "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Between'"
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8C8686'"
+                    }
+                  }
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
-        }
-      ],
-      "numericInputStyle": [
+        },
         {
           "properties": {
-            "fontColor": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B3A76F'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -61,76 +83,38 @@
                   }
                 }
               }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11D"
-                }
-              }
             }
-          }
-        }
-      ],
-      "slider": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F0E199'"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F0E199'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            }
+          },
+          "selector": {
+            "id": "interaction:hover"
           }
         }
       ],
       "general": [
         {
+          "properties": {}
+        }
+      ],
+      "layout": [
+        {
           "properties": {
-            "outlineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F0E199'"
-                    }
-                  }
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "overFlow": [
+        {
+          "properties": {
+            "overFlowDirection": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -139,6 +123,26 @@
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "background": [
         {
           "properties": {
@@ -146,6 +150,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -158,7 +182,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3fc079ce83d03a1187b9",
+        "name": "047f51ba080da975977c",
         "field": {
           "Column": {
             "Expression": {
@@ -166,10 +190,10 @@
                 "Entity": "Bank_Churn"
               }
             },
-            "Property": "Tenure"
+            "Property": "IsActiveMember"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

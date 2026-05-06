@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "1386ce44ba42c260748e",
   "position": {
-    "x": 32.933214961724651,
-    "y": 691.59751419621773,
+    "x": 120,
+    "y": 738,
     "z": 9,
-    "height": 374.61532018961793,
-    "width": 415.7818388917737,
+    "height": 312,
+    "width": 352,
     "tabOrder": 9
   },
   "visual": {
@@ -45,11 +45,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Total Churned Clients"
+                  "Property": "Males"
                 }
               },
-              "queryRef": "Calculations.Total Churned Clients",
-              "nativeQueryRef": "Total Churned Clients"
+              "queryRef": "Calculations.Males",
+              "nativeQueryRef": "Males"
             },
             {
               "field": {
@@ -59,11 +59,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Total Active Clients"
+                  "Property": "Females"
                 }
               },
-              "queryRef": "Calculations.Total Active Clients",
-              "nativeQueryRef": "Total Active Clients"
+              "queryRef": "Calculations.Females",
+              "nativeQueryRef": "Females"
             }
           ]
         }
@@ -78,7 +78,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Total Churned Clients"
+                "Property": "Males"
               }
             },
             "direction": "Descending"
@@ -87,38 +87,213 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "47L"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "23L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0E199'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Calculations.Males"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Calculations.Females"
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "clusteredGapSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "673c1615a7cd81e31ba0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Churned Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6dd90a3651d2e328b3c8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Active Clients"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "fd457f80189d90c61c43",
         "field": {
@@ -132,6 +307,34 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "3e9cc55d63ced5920475",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Males"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bf65a976da0e093a37a4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Females"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

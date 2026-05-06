@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "cc51cd0b675a90ba75ca",
   "position": {
-    "x": 88.508015209635,
-    "y": 0,
+    "x": 608,
+    "y": 26,
     "z": 0,
-    "height": 201.7159416405635,
-    "width": 1409.9532655488367,
+    "height": 174,
+    "width": 750,
     "tabOrder": 0
   },
   "visual": {
@@ -15,62 +15,6 @@
       "queryState": {
         "Data": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Total Active Clients"
-                }
-              },
-              "queryRef": "Calculations.Total Active Clients",
-              "nativeQueryRef": "Total Active Clients"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Total Churned Clients"
-                }
-              },
-              "queryRef": "Calculations.Total Churned Clients",
-              "nativeQueryRef": "Total Churned Clients"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Total Clients"
-                }
-              },
-              "queryRef": "Calculations.Total Clients",
-              "nativeQueryRef": "Total Clients"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Churn Rate%"
-                }
-              },
-              "queryRef": "Calculations.Churn Rate%",
-              "nativeQueryRef": "Churn Rate%"
-            },
             {
               "field": {
                 "Measure": {
@@ -98,34 +42,6 @@
               },
               "queryRef": "Calculations.AVG Balance",
               "nativeQueryRef": "AVG Balance"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Females"
-                }
-              },
-              "queryRef": "Calculations.Females",
-              "nativeQueryRef": "Females"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Males"
-                }
-              },
-              "queryRef": "Calculations.Males",
-              "nativeQueryRef": "Males"
             }
           ]
         }
@@ -140,7 +56,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Total Active Clients"
+                "Property": "AVG Salary"
               }
             },
             "direction": "Descending"
@@ -149,66 +65,177 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0E199'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "2ce19f80926b6c739e7b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Active Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "da0bcc1b043121d7e02b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Churned Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c5e9387914805b25e1a4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c0eb2ea256db60853420",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "bce3f7fab679e3e84d30",
         "field": {
@@ -233,34 +260,6 @@
               }
             },
             "Property": "AVG Balance"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "915b78057c5a9bd40137",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Females"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e6c51c317c1d844233d4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Males"
           }
         },
         "type": "Advanced"

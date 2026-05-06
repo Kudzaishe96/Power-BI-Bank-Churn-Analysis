@@ -47,6 +47,40 @@ table Calculations
 		formatString: 0
 		lineageTag: 534f9b66-f096-4ee9-9c1a-57f27031e270
 
+	measure 'females Churn Rate%' = ```
+			
+			    VAR Total_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),ALL(Bank_Churn)
+			                                )
+			    
+			    VAR Exited_Female_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Exited] == "Churned"
+			                                                                        ,Bank_Churn[Gender] =="Female"
+			                                )
+			
+			    RETURN
+			    DIVIDE(Exited_Female_Clients,Total_Clients,0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 123f6f85-0ee6-43cc-8767-797410e7c529
+
+	measure 'Male Churn Rate%' = ```
+			
+			    VAR Total_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),ALL(Bank_Churn)
+			                                )
+			    
+			    VAR Exited_Male_Clients = CALCULATE(
+			                                    DISTINCTCOUNT(Bank_Churn[CustomerId]),Bank_Churn[Exited] == "Churned"
+			                                                                        ,Bank_Churn[Gender] =="Male"
+			                                )
+			
+			    RETURN
+			    DIVIDE(Exited_Male_Clients,Total_Clients,0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 63217963-bb18-45b9-ae21-e36664d10a47
+
 	partition Calculations = m
 		mode: import
 		source =

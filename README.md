@@ -1,4 +1,4 @@
-# Power-BI-Bank-Churn-Analysis
+# Churn-Analysis
 Customer Bank Churn Analysis
 
 ## Table Of Contents

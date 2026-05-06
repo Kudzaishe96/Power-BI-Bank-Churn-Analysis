@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "4180a625a890006bc980",
   "position": {
-    "x": 32.933214961724651,
-    "y": 236.70748253739592,
+    "x": 120,
+    "y": 430,
     "z": 2,
-    "height": 471.35663913968409,
-    "width": 415.7818388917737,
+    "height": 292,
+    "width": 352,
     "tabOrder": 2
   },
   "visual": {
@@ -20,40 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Age Catergory"
+                      "Entity": "CreditScore"
                     }
                   },
-                  "Property": "AgeCategory"
+                  "Property": "CreditScoreGroup"
                 }
               },
-              "queryRef": "Age Catergory.AgeCategory",
-              "nativeQueryRef": "AgeCategory",
+              "queryRef": "CreditScore.CreditScoreGroup",
+              "nativeQueryRef": "CreditScoreGroup",
               "active": true
             }
           ]
         },
         "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Age Catergory"
-                        }
-                      },
-                      "Property": "AgeId"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "CountNonNull(Age Catergory.AgeId)",
-              "nativeQueryRef": "Sum of AgeId"
-            }
-          ]
+          "projections": []
         },
         "Y": {
           "projections": [
@@ -65,11 +45,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Total Churned Clients"
+                  "Property": "Males"
                 }
               },
-              "queryRef": "Calculations.Total Churned Clients",
-              "nativeQueryRef": "Total Churned Clients"
+              "queryRef": "Calculations.Males",
+              "nativeQueryRef": "Males"
             },
             {
               "field": {
@@ -79,11 +59,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Total Active Clients"
+                  "Property": "Females"
                 }
               },
-              "queryRef": "Calculations.Total Active Clients",
-              "nativeQueryRef": "Total Active Clients"
+              "queryRef": "Calculations.Females",
+              "nativeQueryRef": "Females"
             }
           ]
         }
@@ -92,86 +72,266 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Age Catergory"
-                      }
-                    },
-                    "Property": "AgeId"
+                  "SourceRef": {
+                    "Entity": "Calculations"
                   }
                 },
-                "Function": 0
+                "Property": "Males"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "47L"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "23L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0E199'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Calculations.Males"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Calculations.Females"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "clusteredGapSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "9126c41689427cc9a551",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Churned Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "92608a8775051bc2d9cc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Active Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8ba6c53a094081546333",
+        "name": "54c24fe305a73760dc94",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Age Catergory"
+                "Entity": "CreditScore"
               }
             },
-            "Property": "AgeCategory"
+            "Property": "CreditScoreGroup"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "81e78201480e2460232b",
+        "name": "a7318240032cc4600a41",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Age Catergory"
-                  }
-                },
-                "Property": "AgeId"
+              "SourceRef": {
+                "Entity": "Calculations"
               }
             },
-            "Function": 0
+            "Property": "Males"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "700f6e00aa54440cb2e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "Females"
           }
         },
         "type": "Advanced"

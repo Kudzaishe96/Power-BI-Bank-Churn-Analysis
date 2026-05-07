@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "7ceeba0b337964292481",
+  "name": "b9835db1499c3d4616ea",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
-    "z": 13000,
-    "height": 115.90909090909091,
-    "width": 140.90909090909091,
-    "tabOrder": 13000
+    "x": 126.72724498401989,
+    "y": 100.00000693581322,
+    "z": 17000,
+    "height": 150,
+    "width": 230,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "females Churn Rate%"
+                  "Property": "Churn Rate%"
                 }
               },
-              "queryRef": "Calculations.females Churn Rate%",
-              "nativeQueryRef": "females Churn Rate%"
+              "queryRef": "Calculations.Churn Rate%",
+              "nativeQueryRef": "Churn Rate%"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "females Churn Rate%"
+                "Property": "Churn Rate%"
               }
             },
             "direction": "Descending"
@@ -55,20 +55,6 @@
       "value": [
         {
           "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "22D"
-                }
-              }
-            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -79,23 +65,41 @@
                   }
                 }
               }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "label": [
-        {
-          "properties": {
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "35D"
+                }
+              }
+            },
             "fontFamily": {
               "expr": {
                 "Literal": {
                   "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
-            },
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
             "fontColor": {
               "solid": {
                 "color": {
@@ -104,6 +108,13 @@
                       "Value": "'#D9D4BD'"
                     }
                   }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -192,55 +203,6 @@
                   "Value": "false"
                 }
               }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
             }
           }
         }
@@ -251,7 +213,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0076df06c347ecccc0b1",
+        "name": "b10c7d1e4bc304a55b3c",
         "field": {
           "Measure": {
             "Expression": {
@@ -259,7 +221,7 @@
                 "Entity": "Calculations"
               }
             },
-            "Property": "females Churn Rate%"
+            "Property": "Churn Rate%"
           }
         },
         "type": "Advanced"

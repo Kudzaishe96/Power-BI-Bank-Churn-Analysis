@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "854bea06c426e449cb63",
   "position": {
-    "x": 1496,
-    "y": 86,
-    "z": 6,
-    "height": 130,
-    "width": 274,
-    "tabOrder": 6
+    "x": 1354.090881347656,
+    "y": 110.90909784490412,
+    "z": 4000,
+    "height": 88.63636363636364,
+    "width": 472.72727272727275,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -65,7 +65,14 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -116,6 +123,13 @@
                   "Value": "4D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -158,7 +172,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3fc079ce83d03a1187b9",
+        "name": "885dd0dbac793905275c",
         "field": {
           "Column": {
             "Expression": {

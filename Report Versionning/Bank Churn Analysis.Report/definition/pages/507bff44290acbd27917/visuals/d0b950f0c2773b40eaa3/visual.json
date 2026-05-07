@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "7ceeba0b337964292481",
+  "name": "d0b950f0c2773b40eaa3",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
-    "z": 13000,
-    "height": 115.90909090909091,
+    "x": 717.727383700284,
+    "y": 207.72725885564626,
+    "z": 18000,
+    "height": 79.545454545454547,
     "width": 140.90909090909091,
-    "tabOrder": 13000
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "females Churn Rate%"
+                  "Property": "Males"
                 }
               },
-              "queryRef": "Calculations.females Churn Rate%",
-              "nativeQueryRef": "females Churn Rate%"
+              "queryRef": "Calculations.Males",
+              "nativeQueryRef": "Males"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "females Churn Rate%"
+                "Property": "Males"
               }
             },
             "direction": "Descending"
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "19D"
                 }
               }
             },
@@ -251,7 +251,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0076df06c347ecccc0b1",
+        "name": "5773ff60bd99b99e0808",
         "field": {
           "Measure": {
             "Expression": {
@@ -259,7 +259,7 @@
                 "Entity": "Calculations"
               }
             },
-            "Property": "females Churn Rate%"
+            "Property": "Males"
           }
         },
         "type": "Advanced"

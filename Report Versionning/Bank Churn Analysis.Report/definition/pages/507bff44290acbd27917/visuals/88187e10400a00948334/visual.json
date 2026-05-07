@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "6ed0899e23d5068a2862",
+  "name": "88187e10400a00948334",
   "position": {
-    "x": 310,
-    "y": 80,
-    "z": 14,
-    "height": 150,
-    "width": 198,
-    "tabOrder": 14
+    "x": 1520.1818459250708,
+    "y": 415.63634976473725,
+    "z": 15000,
+    "height": 110,
+    "width": 142,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,12 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Churn Rate%"
+                  "Property": "Total Churned Clients"
                 }
               },
-              "queryRef": "Calculations.Churn Rate%",
-              "nativeQueryRef": "Churn Rate%"
+              "queryRef": "Calculations.Total Churned Clients",
+              "nativeQueryRef": "Churned Clients",
+              "displayName": "Churned Clients"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Churn Rate%"
+                "Property": "Total Churned Clients"
               }
             },
             "direction": "Descending"
@@ -55,6 +56,20 @@
       "value": [
         {
           "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -63,20 +78,6 @@
                       "Value": "'#F0E199'"
                     }
                   }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "29D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -89,6 +90,13 @@
       "label": [
         {
           "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -97,6 +105,13 @@
                       "Value": "'#D9D4BD'"
                     }
                   }
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -178,29 +193,60 @@
                   "Value": "false"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "aa421a0d226324322e00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

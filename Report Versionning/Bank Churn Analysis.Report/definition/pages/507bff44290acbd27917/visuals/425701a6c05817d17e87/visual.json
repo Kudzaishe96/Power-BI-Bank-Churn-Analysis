@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "425701a6c05817d17e87",
   "position": {
-    "x": 558,
-    "y": 430,
-    "z": 10,
-    "height": 594,
-    "width": 382,
-    "tabOrder": 10
+    "x": 602.72730047052551,
+    "y": 525.90907703746439,
+    "z": 8000,
+    "height": 518.18181818181813,
+    "width": 654.5454545454545,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,15 +20,38 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "CreditScore"
+                      "Entity": "Age Catergory"
                     }
                   },
-                  "Property": "CreditScoreGroup"
+                  "Property": "AgeCategory"
                 }
               },
-              "queryRef": "CreditScore.CreditScoreGroup",
-              "nativeQueryRef": "CreditScoreGroup",
+              "queryRef": "Age Catergory.AgeCategory",
+              "nativeQueryRef": "AgeCategory",
               "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Age Catergory"
+                        }
+                      },
+                      "Property": "AgeId"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "CountNonNull(Age Catergory.AgeId)",
+              "nativeQueryRef": "Sum of AgeId"
             }
           ]
         },
@@ -69,19 +92,23 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calculations"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Age Catergory"
+                      }
+                    },
+                    "Property": "AgeId"
                   }
                 },
-                "Property": "Total Churned Clients"
+                "Function": 0
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
@@ -110,6 +137,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
                 }
               }
             }
@@ -162,7 +196,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F0E199'"
+                      "Value": "'#F5ECC6'"
                     }
                   }
                 }
@@ -209,6 +243,25 @@
                   "Value": "false"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Dummy active clients max"
+                }
+              }
             }
           }
         }
@@ -220,6 +273,38 @@
               "expr": {
                 "Literal": {
                   "Value": "23D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
                 }
               }
             }
@@ -242,11 +327,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
+                    "Literal": {
+                      "Value": "'#F5ECC6'"
                     }
                   }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'CHURNED CLIENTS ,ACTIVE CLIENTS BY AGE GROUP'"
                 }
               }
             }
@@ -292,7 +383,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4f1f03e8a4e1845ea88a",
+        "name": "a0dda4c44dd3699dc0d4",
         "field": {
           "Measure": {
             "Expression": {
@@ -306,7 +397,7 @@
         "type": "Advanced"
       },
       {
-        "name": "3342c8ae29a6248a71ee",
+        "name": "67bd9e9896038dd9c3b6",
         "field": {
           "Measure": {
             "Expression": {
@@ -320,18 +411,37 @@
         "type": "Advanced"
       },
       {
-        "name": "e819ef10d8569b762488",
+        "name": "67d46e1c2150cbd6e677",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "CreditScore"
+                "Entity": "Age Catergory"
               }
             },
-            "Property": "CreditScoreGroup"
+            "Property": "AgeCategory"
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "d8dce5cd2322d0381809",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Age Catergory"
+                  }
+                },
+                "Property": "AgeId"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

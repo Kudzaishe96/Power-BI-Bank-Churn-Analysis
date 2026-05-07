@@ -1,75 +1,84 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "7ceeba0b337964292481",
+  "name": "11d5df45c66d7bae7499",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
-    "z": 13000,
-    "height": 115.90909090909091,
-    "width": 140.90909090909091,
-    "tabOrder": 13000
+    "x": 1330.4546009410508,
+    "y": 237.7272865988991,
+    "z": 20000,
+    "height": 131.81818181818181,
+    "width": 163.63636363636363,
+    "tabOrder": 20000
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
-        "Data": {
+        "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Calculations"
+                      "Entity": "Bank_Churn"
                     }
                   },
-                  "Property": "females Churn Rate%"
+                  "Property": "HasCrCard"
                 }
               },
-              "queryRef": "Calculations.females Churn Rate%",
-              "nativeQueryRef": "females Churn Rate%"
+              "queryRef": "Bank_Churn.HasCrCard",
+              "nativeQueryRef": "HasCrCard"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calculations"
-                  }
-                },
-                "Property": "females Churn Rate%"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "value": [
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "fillCustom": [
         {
           "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8C8686'"
+                    }
+                  }
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "22D"
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B3A76F'"
+                    }
+                  }
                 }
               }
-            },
-            "fontColor": {
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -82,17 +91,64 @@
             }
           },
           "selector": {
-            "id": "default"
+            "id": "interaction:hover"
           }
         }
       ],
-      "label": [
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "overFlow": [
+        {
+          "properties": {
+            "overFlowDirection": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "value": [
         {
           "properties": {
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -100,84 +156,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#D9D4BD'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
               }
-            },
-            "textWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           },
           "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "backgroundShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "outline": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "divider": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "fillCustom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+            "id": "selection:selected"
           }
         }
       ]
@@ -206,6 +195,13 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -213,22 +209,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -251,18 +231,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0076df06c347ecccc0b1",
+        "name": "dbc55cbd00ab60dc2b23",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Calculations"
+                "Entity": "Bank_Churn"
               }
             },
-            "Property": "females Churn Rate%"
+            "Property": "HasCrCard"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

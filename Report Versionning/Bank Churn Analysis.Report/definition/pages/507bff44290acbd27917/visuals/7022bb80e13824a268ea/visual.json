@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "033ce708d74b2050c8d8",
+  "name": "7022bb80e13824a268ea",
   "position": {
-    "x": 120.45454545454545,
-    "y": 20.454545454545453,
-    "z": 11000,
-    "height": 113.63636363636364,
-    "width": 684.09090909090912,
-    "tabOrder": 11000
+    "x": 1372.2726995294743,
+    "y": 74.545461481267765,
+    "z": 21000,
+    "height": 50,
+    "width": 150,
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,19 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bank Churn Analysis | ",
+                    "value": "TENURE",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Light",
-                      "fontSize": "42pt",
-                      "color": "#f0e199"
-                    }
-                  },
-                  {
-                    "value": "OVERVIEW",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Light",
-                      "fontSize": "24pt",
-                      "color": "#f0e199"
+                      "fontFamily": "DIN Light",
+                      "fontSize": "16pt",
+                      "color": "#f5ecc6"
                     }
                   }
                 ]

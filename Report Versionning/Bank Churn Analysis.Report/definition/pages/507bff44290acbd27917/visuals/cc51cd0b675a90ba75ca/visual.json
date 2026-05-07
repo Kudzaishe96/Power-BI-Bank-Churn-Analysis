@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "cc51cd0b675a90ba75ca",
   "position": {
-    "x": 608,
-    "y": 26,
+    "x": 597.27269952947438,
+    "y": 99.545461481267765,
     "z": 0,
-    "height": 174,
-    "width": 750,
+    "height": 109.09090909090909,
+    "width": 645.4545454545455,
     "tabOrder": 0
   },
   "visual": {
@@ -42,6 +42,20 @@
               },
               "queryRef": "Calculations.AVG Balance",
               "nativeQueryRef": "AVG Balance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "AVG Credit Score"
+                }
+              },
+              "queryRef": "Calculations.AVG Credit Score",
+              "nativeQueryRef": "AVG Credit Score"
             }
           ]
         }
@@ -160,6 +174,13 @@
                   }
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
             }
           },
           "selector": {
@@ -237,7 +258,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bce3f7fab679e3e84d30",
+        "name": "c1e66718467ec7560114",
         "field": {
           "Measure": {
             "Expression": {
@@ -251,7 +272,7 @@
         "type": "Advanced"
       },
       {
-        "name": "22429926000a16313100",
+        "name": "1e595228034a7b0ee760",
         "field": {
           "Measure": {
             "Expression": {
@@ -260,6 +281,20 @@
               }
             },
             "Property": "AVG Balance"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0f2c6772b1ee8303ea22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculations"
+              }
+            },
+            "Property": "AVG Credit Score"
           }
         },
         "type": "Advanced"

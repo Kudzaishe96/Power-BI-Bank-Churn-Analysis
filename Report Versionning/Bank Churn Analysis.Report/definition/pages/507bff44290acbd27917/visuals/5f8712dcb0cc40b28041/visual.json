@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "5f8712dcb0cc40b28041",
   "position": {
-    "x": 1452,
-    "y": 230,
-    "z": 4,
-    "height": 162,
-    "width": 162,
-    "tabOrder": 4
+    "x": 1510.0000554865055,
+    "y": 237.7272865988991,
+    "z": 3000,
+    "height": 131.81818181818181,
+    "width": 161.36363636363637,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -125,6 +125,55 @@
             }
           }
         }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selection:selected"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -160,7 +209,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f5a2cc85006e094706c4",
+        "name": "f8504de50d1382e2da54",
         "field": {
           "Column": {
             "Expression": {

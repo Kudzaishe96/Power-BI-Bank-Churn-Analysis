@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "7ceeba0b337964292481",
+  "name": "a83ac65c2789a0887d41",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
-    "z": 13000,
-    "height": 115.90909090909091,
-    "width": 140.90909090909091,
-    "tabOrder": 13000
+    "x": 1045.0001109730108,
+    "y": 212.27271340110082,
+    "z": 19000,
+    "height": 75,
+    "width": 143.18181818181819,
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "females Churn Rate%"
+                  "Property": "Females"
                 }
               },
-              "queryRef": "Calculations.females Churn Rate%",
-              "nativeQueryRef": "females Churn Rate%"
+              "queryRef": "Calculations.Females",
+              "nativeQueryRef": "Females"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "females Churn Rate%"
+                "Property": "Females"
               }
             },
             "direction": "Descending"
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "19D"
                 }
               }
             },
@@ -247,23 +247,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0076df06c347ecccc0b1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "females Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

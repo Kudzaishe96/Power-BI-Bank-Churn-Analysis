@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "7ceeba0b337964292481",
+  "name": "f50ccc6188018cc0be82",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
-    "z": 13000,
-    "height": 115.90909090909091,
-    "width": 140.90909090909091,
-    "tabOrder": 13000
+    "x": 1378.1818459250708,
+    "y": 409.63634976473725,
+    "z": 14000,
+    "height": 110,
+    "width": 142,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "females Churn Rate%"
+                  "Property": "Total Clients"
                 }
               },
-              "queryRef": "Calculations.females Churn Rate%",
-              "nativeQueryRef": "females Churn Rate%"
+              "queryRef": "Calculations.Total Clients",
+              "nativeQueryRef": "Total Clients"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "females Churn Rate%"
+                "Property": "Total Clients"
               }
             },
             "direction": "Descending"
@@ -247,23 +247,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0076df06c347ecccc0b1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "females Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

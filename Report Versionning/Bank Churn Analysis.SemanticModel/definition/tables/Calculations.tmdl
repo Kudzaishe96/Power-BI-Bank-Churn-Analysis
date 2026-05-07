@@ -81,6 +81,39 @@ table Calculations
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 63217963-bb18-45b9-ae21-e36664d10a47
 
+	measure 'AVG Credit Score' = AVERAGEX(Bank_Churn,Bank_Churn[CreditScore])
+		lineageTag: a2dc0e0c-90c1-4934-821c-a2b38b48ce98
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Female Churned Clients' =
+			CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId])
+			                                ,Bank_Churn[Exited]=="Churned",Bank_Churn[Gender]=="Female"
+			                                )
+		formatString: 0
+		lineageTag: 84c89a63-c748-49af-ad50-20f2fba6c93d
+
+	measure 'Total Male Churned Clients' =
+			CALCULATE(DISTINCTCOUNT(Bank_Churn[CustomerId])
+			                                ,Bank_Churn[Exited]=="Churned",Bank_Churn[Gender]=="Male"
+			                                )
+		formatString: 0
+		lineageTag: 553af67c-c828-41c8-bd2d-c82b81dbaeb9
+
+	measure 'Dummy credit score max' = (MAXX(VALUES(CreditScore[CreditScoreGroup]),[Total Active Clients]))*1.25
+		formatString: 0
+		lineageTag: 3a43f29b-12c1-4a5d-bb7e-05f8cb214a89
+
+	measure 'Dummy active clients max' = (MAXX(VALUES('Age Catergory'[AgeCategory]),[Total Active Clients]))*1.25
+		lineageTag: 40d567f4-2bed-49a2-b489-ec0d3ddf4145
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dummy active clients max Accounts' = (MAXX(VALUES(Accounts[NumberOfAccounts]),[Total Active Clients]))*1.25
+		lineageTag: 10912b94-94a8-406c-a7e6-bfc231255719
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Calculations = m
 		mode: import
 		source =

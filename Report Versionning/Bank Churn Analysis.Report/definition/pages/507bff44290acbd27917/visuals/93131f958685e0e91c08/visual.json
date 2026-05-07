@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "93131f958685e0e91c08",
   "position": {
-    "x": 633.5999755859375,
-    "y": 206.39996337890625,
-    "z": 16,
-    "height": 150,
-    "width": 198,
-    "tabOrder": 16
+    "x": 715.909229625355,
+    "y": 297.72727272727269,
+    "z": 12000,
+    "height": 115.90909090909091,
+    "width": 138.63636363636363,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -76,7 +76,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -97,6 +97,20 @@
                       "Value": "'#D9D4BD'"
                     }
                   }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -184,23 +198,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "849a99261e0989eeda60",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Male Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

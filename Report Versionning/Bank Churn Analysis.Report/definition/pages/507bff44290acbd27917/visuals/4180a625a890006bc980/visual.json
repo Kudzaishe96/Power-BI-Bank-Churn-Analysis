@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "4180a625a890006bc980",
   "position": {
-    "x": 120,
-    "y": 430,
-    "z": 2,
-    "height": 292,
-    "width": 352,
-    "tabOrder": 2
+    "x": 118.63639137961647,
+    "y": 525.90907703746439,
+    "z": 1000,
+    "height": 231.81818181818181,
+    "width": 413.63636363636363,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -32,9 +32,6 @@
             }
           ]
         },
-        "Tooltips": {
-          "projections": []
-        },
         "Y": {
           "projections": [
             {
@@ -45,25 +42,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Males"
+                  "Property": "Total Active Clients"
                 }
               },
-              "queryRef": "Calculations.Males",
-              "nativeQueryRef": "Males"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Females"
-                }
-              },
-              "queryRef": "Calculations.Females",
-              "nativeQueryRef": "Females"
+              "queryRef": "Calculations.Total Active Clients",
+              "nativeQueryRef": "Total Active Clients"
             }
           ]
         }
@@ -78,7 +61,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Males"
+                "Property": "Total Active Clients"
               }
             },
             "direction": "Descending"
@@ -119,7 +102,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "23L"
+                  "Value": "45L"
                 }
               }
             }
@@ -173,6 +156,63 @@
                   "Value": "false"
                 }
               }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculations"
+                    }
+                  },
+                  "Property": "Dummy credit score max"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "clusteredGapSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
             }
           }
         }
@@ -185,44 +225,9 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F0E199'"
+                      "Value": "'#F5ECC6'"
                     }
                   }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Calculations.Males"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Calculations.Females"
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "clusteredGapSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "36D"
                 }
               }
             }
@@ -265,11 +270,24 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
+                    "Literal": {
+                      "Value": "'#F5ECC6'"
                     }
                   }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ACTIVE CLIENTS BY CREDIT SCORE'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -288,6 +306,19 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -295,7 +326,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "54c24fe305a73760dc94",
+        "name": "f9bbbc81037ace00e0ba",
         "field": {
           "Column": {
             "Expression": {
@@ -309,7 +340,7 @@
         "type": "Categorical"
       },
       {
-        "name": "a7318240032cc4600a41",
+        "name": "78f019a7bd0ea83c9b13",
         "field": {
           "Measure": {
             "Expression": {
@@ -317,21 +348,7 @@
                 "Entity": "Calculations"
               }
             },
-            "Property": "Males"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "700f6e00aa54440cb2e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Females"
+            "Property": "Total Active Clients"
           }
         },
         "type": "Advanced"

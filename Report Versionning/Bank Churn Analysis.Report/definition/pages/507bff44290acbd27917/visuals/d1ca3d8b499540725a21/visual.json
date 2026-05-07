@@ -2,17 +2,36 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "d1ca3d8b499540725a21",
   "position": {
-    "x": 959.61538461538453,
-    "y": 155.76923076923077,
-    "z": 8,
-    "height": 273.07692307692309,
-    "width": 280.76923076923077,
-    "tabOrder": 8
+    "x": 973.181845925071,
+    "y": 250.90907703746456,
+    "z": 6000,
+    "height": 238.63636363636363,
+    "width": 279.54545454545456,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "donutChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bank_Churn"
+                    }
+                  },
+                  "Property": "IsActiveMember"
+                }
+              },
+              "queryRef": "Bank_Churn.IsActiveMember",
+              "nativeQueryRef": "IsActiveMember",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -23,25 +42,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Males"
+                  "Property": "Total Female Churned Clients"
                 }
               },
-              "queryRef": "Calculations.Males",
-              "nativeQueryRef": "Males"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Females"
-                }
-              },
-              "queryRef": "Calculations.Females",
-              "nativeQueryRef": "Females"
+              "queryRef": "Calculations.Total Female Churned Clients",
+              "nativeQueryRef": "Total Female Churned Clients"
             }
           ]
         }
@@ -56,7 +61,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Males"
+                "Property": "Total Female Churned Clients"
               }
             },
             "direction": "Descending"
@@ -74,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3A76F'"
+                      "Value": "'#F0E199'"
                     }
                   }
                 }
@@ -82,7 +87,30 @@
             }
           },
           "selector": {
-            "metadata": "Calculations.Total Churned Clients"
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Bank_Churn"
+                          }
+                        },
+                        "Property": "IsActiveMember"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ActiveMember'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         },
         {
@@ -93,7 +121,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.5
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -101,7 +129,30 @@
             }
           },
           "selector": {
-            "metadata": "Calculations.Total Active Clients"
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Bank_Churn"
+                          }
+                        },
+                        "Property": "IsActiveMember"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'NonActiveMember'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],
@@ -124,7 +175,39 @@
             "innerRadiusRatio": {
               "expr": {
                 "Literal": {
-                  "Value": "84L"
+                  "Value": "90L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
                 }
               }
             }
@@ -136,6 +219,13 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -152,13 +242,6 @@
                       "Percent": -0.5
                     }
                   }
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -204,21 +287,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "35154cb20344c8821ba5",
+        "name": "6425f19edacb2bb52a50",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Calculations"
+                "Entity": "Bank_Churn"
               }
             },
-            "Property": "Males"
+            "Property": "IsActiveMember"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       },
       {
-        "name": "04e6f500a6e0dbe45b40",
+        "name": "1082e3ee25ebbc93064b",
         "field": {
           "Measure": {
             "Expression": {
@@ -226,7 +309,7 @@
                 "Entity": "Calculations"
               }
             },
-            "Property": "Females"
+            "Property": "Total Female Churned Clients"
           }
         },
         "type": "Advanced"

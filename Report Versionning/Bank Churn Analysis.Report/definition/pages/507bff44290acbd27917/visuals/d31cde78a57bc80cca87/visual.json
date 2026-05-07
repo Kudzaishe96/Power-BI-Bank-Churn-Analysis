@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "d31cde78a57bc80cca87",
   "position": {
-    "x": 1380,
-    "y": 502,
-    "z": 3,
-    "height": 522,
-    "width": 468,
-    "tabOrder": 3
+    "x": 1332.2727550159798,
+    "y": 525.90907703746439,
+    "z": 2000,
+    "height": 518.18181818181813,
+    "width": 520.4545454545455,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "azureMap",
@@ -110,7 +110,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3A76F'"
+                      "Value": "'#F5ECC6'"
                     }
                   }
                 }
@@ -125,7 +125,7 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "4.33D"
+                  "Value": "4.35D"
                 }
               }
             },
@@ -219,37 +219,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "01e7b209324b870d01d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "Geography"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "50c574c8bd1365761e41",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Churned Clients"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

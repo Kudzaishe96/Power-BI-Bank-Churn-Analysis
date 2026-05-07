@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "cb7099a5581a24b05aba",
   "position": {
-    "x": 72,
-    "y": 140,
-    "z": 12,
-    "height": 232,
+    "x": 118.63639137961647,
+    "y": 232.72725885564628,
+    "z": 10000,
+    "height": 240.90909090909091,
     "width": 400,
-    "tabOrder": 12
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -106,7 +106,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F0E199'"
+                      "Value": "'#F5ECC6'"
                     }
                   }
                 }
@@ -133,6 +133,13 @@
                       "Value": "'#D9D4BD'"
                     }
                   }
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -217,7 +224,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2734c9290ace0607909b",
+        "name": "bf07597161a02437ab61",
         "field": {
           "Measure": {
             "Expression": {
@@ -231,7 +238,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e1f9c438b56435417958",
+        "name": "639880420e6a97949ca1",
         "field": {
           "Column": {
             "Expression": {
@@ -245,7 +252,7 @@
         "type": "Categorical"
       },
       {
-        "name": "06bc176dc16ed648a281",
+        "name": "7371ae9dc0da180c123e",
         "field": {
           "Aggregation": {
             "Expression": {

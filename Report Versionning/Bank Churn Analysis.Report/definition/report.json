@@ -37,6 +37,27 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Bank_Churn09765286523786687.svg",
+          "path": "Bank_Churn09765286523786687.svg",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-dog-paw-6425692010727118875.png",
+          "path": "icons8-dog-paw-6425692010727118875.png",
+          "type": "Image"
+        },
+        {
+          "name": "user9992953511539848.png",
+          "path": "user9992953511539848.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

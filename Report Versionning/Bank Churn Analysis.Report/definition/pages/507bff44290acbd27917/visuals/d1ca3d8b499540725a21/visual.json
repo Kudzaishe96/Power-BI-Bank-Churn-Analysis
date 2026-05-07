@@ -2,17 +2,36 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "d1ca3d8b499540725a21",
   "position": {
-    "x": 885.08015209635,
-    "y": 677.18923265046317,
-    "z": 8,
-    "height": 273.75734936933617,
-    "width": 279.93232717465952,
-    "tabOrder": 8
+    "x": 1006.3164477798626,
+    "y": 253.27076294632391,
+    "z": 6000,
+    "height": 239.02439024390245,
+    "width": 280.48780487804879,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "donutChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bank_Churn"
+                    }
+                  },
+                  "Property": "IsActiveMember"
+                }
+              },
+              "queryRef": "Bank_Churn.IsActiveMember",
+              "nativeQueryRef": "IsActiveMember",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -23,25 +42,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Males"
+                  "Property": "Total Female Churned Clients"
                 }
               },
-              "queryRef": "Calculations.Males",
-              "nativeQueryRef": "Males"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Females"
-                }
-              },
-              "queryRef": "Calculations.Females",
-              "nativeQueryRef": "Females"
+              "queryRef": "Calculations.Total Female Churned Clients",
+              "nativeQueryRef": "Total Female Churned Clients"
             }
           ]
         }
@@ -56,7 +61,7 @@
                     "Entity": "Calculations"
                   }
                 },
-                "Property": "Males"
+                "Property": "Total Female Churned Clients"
               }
             },
             "direction": "Descending"
@@ -65,38 +70,218 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0E199'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Bank_Churn"
+                          }
+                        },
+                        "Property": "IsActiveMember"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ActiveMember'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Bank_Churn"
+                          }
+                        },
+                        "Property": "IsActiveMember"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'NonActiveMember'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "innerRadiusRatio": {
+              "expr": {
+                "Literal": {
+                  "Value": "90L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "35154cb20344c8821ba5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Males"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "04e6f500a6e0dbe45b40",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Females"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

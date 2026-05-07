@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "5f8712dcb0cc40b28041",
+  "name": "11d5df45c66d7bae7499",
   "position": {
-    "x": 1526.3414336413873,
+    "x": 1382.438994616997,
     "y": 286.34144852801052,
-    "z": 3000,
+    "z": 20000,
     "height": 134.14634146341464,
-    "width": 141.46341463414635,
-    "tabOrder": 3000
+    "width": 131.70731707317074,
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -23,22 +23,17 @@
                       "Entity": "Bank_Churn"
                     }
                   },
-                  "Property": "Gender"
+                  "Property": "HasCrCard"
                 }
               },
-              "queryRef": "Bank_Churn.Gender",
-              "nativeQueryRef": "Gender"
+              "queryRef": "Bank_Churn.HasCrCard",
+              "nativeQueryRef": "HasCrCard"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
-        {
-          "properties": {}
-        }
-      ],
       "general": [
         {
           "properties": {}
@@ -150,6 +145,13 @@
         },
         {
           "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -159,13 +161,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -186,6 +181,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
@@ -197,6 +199,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

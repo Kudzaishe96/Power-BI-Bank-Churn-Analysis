@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "5f8712dcb0cc40b28041",
+  "name": "a89135717bd9de84441a",
   "position": {
-    "x": 1526.3414336413873,
-    "y": 286.34144852801052,
-    "z": 3000,
+    "x": 1672.6828970560214,
+    "y": 288.78047291825447,
+    "z": 9000,
     "height": 134.14634146341464,
-    "width": 141.46341463414635,
-    "tabOrder": 3000
+    "width": 163.41463414634148,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -23,27 +23,17 @@
                       "Entity": "Bank_Churn"
                     }
                   },
-                  "Property": "Gender"
+                  "Property": "IsActiveMember"
                 }
               },
-              "queryRef": "Bank_Churn.Gender",
-              "nativeQueryRef": "Gender"
+              "queryRef": "Bank_Churn.IsActiveMember",
+              "nativeQueryRef": "IsActiveMember"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
-        {
-          "properties": {}
-        }
-      ],
-      "general": [
-        {
-          "properties": {}
-        }
-      ],
       "fillCustom": [
         {
           "properties": {
@@ -100,6 +90,11 @@
           }
         }
       ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
       "layout": [
         {
           "properties": {
@@ -150,6 +145,13 @@
         },
         {
           "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -161,13 +163,6 @@
                   }
                 }
               }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           },
           "selector": {
@@ -177,6 +172,26 @@
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "background": [
         {
           "properties": {
@@ -186,17 +201,24 @@
                   "Value": "false"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
       ],
-      "title": [
+      "border": [
         {
           "properties": {
-            "show": {
+            "width": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "1D"
                 }
               }
             }

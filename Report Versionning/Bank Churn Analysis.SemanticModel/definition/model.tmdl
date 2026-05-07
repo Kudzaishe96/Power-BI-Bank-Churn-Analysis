@@ -17,6 +17,7 @@ ref table Calculations
 ref table 'Age Catergory'
 ref table Accounts
 ref table CreditScore
+ref table 'Churned and Active Clients'
 
 ref cultureInfo en-US
 

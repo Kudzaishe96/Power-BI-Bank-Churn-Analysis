@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "425701a6c05817d17e87",
+  "name": "cb7099a5581a24b05aba",
   "position": {
-    "x": 602.439024390244,
-    "y": 526.829268292683,
-    "z": 8000,
-    "height": 482.92682926829269,
-    "width": 653.65853658536594,
-    "tabOrder": 8000
+    "x": 131.70731707317074,
+    "y": 214.63414634146343,
+    "z": 10000,
+    "height": 256.09756097560978,
+    "width": 400,
+    "tabOrder": 10000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -65,25 +65,11 @@
                       "Entity": "Calculations"
                     }
                   },
-                  "Property": "Total Churned Clients"
+                  "Property": "Churn Rate%"
                 }
               },
-              "queryRef": "Calculations.Total Churned Clients",
-              "nativeQueryRef": "Total Churned Clients"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Total Active Clients"
-                }
-              },
-              "queryRef": "Calculations.Total Active Clients",
-              "nativeQueryRef": "Total Active Clients"
+              "queryRef": "Calculations.Churn Rate%",
+              "nativeQueryRef": "Churn Rate%"
             }
           ]
         }
@@ -112,100 +98,9 @@
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#D9D4BD'"
-                    }
-                  }
-                }
-              }
-            },
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'BottomCenter'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "47L"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#D9D4BD'"
-                    }
-                  }
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "innerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "20L"
-                }
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F5ECC6'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Calculations.Total Churned Clients"
-          }
+          "properties": {}
         },
         {
           "properties": {
@@ -213,9 +108,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculations"
+                        }
+                      },
+                      "Property": "Dummy Max Churn"
                     }
                   }
                 }
@@ -223,17 +122,34 @@
             }
           },
           "selector": {
-            "metadata": "Calculations.Total Active Clients"
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],
-      "valueAxis": [
+      "categoryAxis": [
         {
           "properties": {
-            "gridlineShow": {
+            "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "50L"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
+                    }
+                  }
                 }
               }
             },
@@ -241,38 +157,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "end": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calculations"
-                    }
-                  },
-                  "Property": "Dummy active clients max"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "clusteredGapSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "25D"
                 }
               }
             }
@@ -293,65 +177,24 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
+                    "Literal": {
+                      "Value": "'#D9D4BD'"
                     }
                   }
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F5ECC6'"
-                    }
-                  }
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'CHURNED CLIENTS ,ACTIVE CLIENTS BY AGE GROUP'"
+                  "Value": "10D"
                 }
               }
             }
           }
         }
       ],
-      "background": [
+      "valueAxis": [
         {
           "properties": {
             "show": {
@@ -361,23 +204,38 @@
                 }
               }
             },
-            "transparency": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "border": [
+      "title": [
         {
           "properties": {
-            "width": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "false"
                 }
               }
             }
@@ -390,7 +248,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "25ae29f2106da459208e",
+        "name": "7d4fa44b10b24802ed24",
         "field": {
           "Measure": {
             "Expression": {
@@ -398,27 +256,13 @@
                 "Entity": "Calculations"
               }
             },
-            "Property": "Total Churned Clients"
+            "Property": "Churn Rate%"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "61c7893a7b055116dfd3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Active Clients"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b132e304a10f9b330f91",
+        "name": "351aa864042a5396e886",
         "field": {
           "Column": {
             "Expression": {
@@ -432,7 +276,7 @@
         "type": "Categorical"
       },
       {
-        "name": "4fa20bf6b88f10f57c51",
+        "name": "0b71779761059299ecb8",
         "field": {
           "Aggregation": {
             "Expression": {

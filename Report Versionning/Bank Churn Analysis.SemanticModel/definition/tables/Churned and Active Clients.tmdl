@@ -1,0 +1,48 @@
+table 'Churned and Active Clients'
+	lineageTag: 5a8e0f4c-0bab-4328-bd7b-ddc63cae170d
+
+	column 'Churned and Active Clients'
+		lineageTag: cd2253bd-43f4-4df0-82d7-e0682bfd1ade
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Churned and Active Clients Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Churned and Active Clients Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Churned and Active Clients Fields'
+		isHidden
+		lineageTag: 5325e423-fa67-4ea6-b755-66545d5c4000
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Churned and Active Clients Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Churned and Active Clients Order'
+		isHidden
+		formatString: 0
+		lineageTag: 93cd4479-6756-4b48-ae39-e99313486571
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Churned and Active Clients' = calculated
+		mode: import
+		source =
+				{
+				    ("Total Churned Clients", NAMEOF('Calculations'[Total Churned Clients]), 0),
+				    ("Total Active Clients", NAMEOF('Calculations'[Total Active Clients]), 1)
+				}
+
+	annotation PBI_Id = f652765a2b7842dab6226b3552806309
+

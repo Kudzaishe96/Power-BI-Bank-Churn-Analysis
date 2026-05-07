@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "11d5df45c66d7bae7499",
   "position": {
-    "x": 1330.4546009410508,
-    "y": 237.7272865988991,
+    "x": 1382.438994616997,
+    "y": 286.34144852801052,
     "z": 20000,
-    "height": 131.81818181818181,
-    "width": 163.63636363636363,
+    "height": 134.14634146341464,
+    "width": 131.70731707317074,
     "tabOrder": 20000
   },
   "visual": {
@@ -227,23 +227,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "dbc55cbd00ab60dc2b23",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "HasCrCard"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "b9835db1499c3d4616ea",
   "position": {
-    "x": 126.72724498401989,
-    "y": 100.00000693581322,
+    "x": 302.56410256410254,
+    "y": 117.94871794871794,
     "z": 17000,
-    "height": 150,
-    "width": 230,
+    "height": 151.28205128205127,
+    "width": 228.2051282051282,
     "tabOrder": 17000
   },
   "visual": {
@@ -69,7 +69,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "35D"
+                  "Value": "40D"
                 }
               }
             },
@@ -122,6 +122,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -209,23 +216,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b10c7d1e4bc304a55b3c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

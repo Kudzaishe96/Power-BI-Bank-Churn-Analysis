@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "7ceeba0b337964292481",
   "position": {
-    "x": 1045.4546841708095,
-    "y": 297.72727272727269,
+    "x": 1079.4871794871794,
+    "y": 304.49027514144581,
     "z": 13000,
-    "height": 115.90909090909091,
-    "width": 140.90909090909091,
+    "height": 117.07317073170732,
+    "width": 139.02439024390245,
     "tabOrder": 13000
   },
   "visual": {
@@ -247,23 +247,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0076df06c347ecccc0b1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "females Churn Rate%"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

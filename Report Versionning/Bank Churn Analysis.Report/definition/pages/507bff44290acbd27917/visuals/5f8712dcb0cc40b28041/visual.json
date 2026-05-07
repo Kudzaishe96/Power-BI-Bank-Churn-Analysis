@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "5f8712dcb0cc40b28041",
   "position": {
-    "x": 1510.0000554865055,
-    "y": 237.7272865988991,
+    "x": 1526.3414336413873,
+    "y": 286.34144852801052,
     "z": 3000,
-    "height": 131.81818181818181,
-    "width": 161.36363636363637,
+    "height": 134.14634146341464,
+    "width": 141.46341463414635,
     "tabOrder": 3000
   },
   "visual": {
@@ -205,23 +205,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f8504de50d1382e2da54",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "Gender"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

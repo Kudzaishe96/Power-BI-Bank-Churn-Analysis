@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "033ce708d74b2050c8d8",
+  "name": "c3e5b098de41b0b05fcc",
   "position": {
-    "x": 175.609756097561,
-    "y": 0,
-    "z": 11000,
-    "height": 114.63414634146342,
-    "width": 685.36585365853659,
-    "tabOrder": 11000
+    "x": 131.70731707317074,
+    "y": 109.75609756097562,
+    "z": 23000,
+    "height": 48.780487804878049,
+    "width": 200,
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,19 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bank Churn Analysis | ",
+                    "value": "CHURNED STATUS",
                     "textStyle": {
-                      "fontFamily": "Segoe UI Light",
-                      "fontSize": "42pt",
-                      "color": "#f0e199"
-                    }
-                  },
-                  {
-                    "value": "OVERVIEW",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI Light",
-                      "fontSize": "24pt",
-                      "color": "#f0e199"
+                      "fontFamily": "DIN Light",
+                      "fontSize": "20pt",
+                      "color": "#f5ecc6"
                     }
                   }
                 ]

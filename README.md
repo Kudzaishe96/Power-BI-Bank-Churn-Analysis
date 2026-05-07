@@ -49,7 +49,7 @@ The analysis is based on the Bank Churn dataset, provided as a CSV file located 
 7. Use the drag-and-drop method to define these relationships.
 
    ### *Relationship Model*
-  ![Data Modell](https://github.com/user-attachments/assets/c541ee44-d215-4056-ad48-2ade7a798344)
+  ![Data Model](image-1.png)
 
 
 ### Data Visualisation
@@ -59,10 +59,10 @@ The analysis is based on the Bank Churn dataset, provided as a CSV file located 
 4. Conduct testing on the report.
 
    ### *Dashboard*
-<img width="1583" height="679" alt="image" src="https://github.com/user-attachments/assets/4f235716-044c-451f-bfb6-68bd2fd6a042" />
+![Dashboard](image.png)
 
 ### *Dashboard Link*
-https://app.powerbi.com/view?r=eyJrIjoiNjhlN2NlNzMtNGI5Yi00N2NhLTlhNmQtNzJjZDQwOTViZDY4IiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9&pageName=9ef621252117e04aec24
+https://app.powerbi.com/view?r=eyJrIjoiZTEyNTg5NzUtNmNkMC00ZTU1LWFkNDEtMDdlYzhlZDUzNmVhIiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9&pageName=507bff44290acbd27917
 
 
 

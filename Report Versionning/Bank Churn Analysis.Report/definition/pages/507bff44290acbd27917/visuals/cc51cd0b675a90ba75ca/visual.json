@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "cc51cd0b675a90ba75ca",
   "position": {
-    "x": 597.27269952947438,
-    "y": 99.545461481267765,
+    "x": 568.29268292682934,
+    "y": 109.75609756097562,
     "z": 0,
-    "height": 109.09090909090909,
-    "width": 645.4545454545455,
+    "height": 109.75609756097562,
+    "width": 809.7560975609756,
     "tabOrder": 0
   },
   "visual": {
@@ -254,51 +254,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c1e66718467ec7560114",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "AVG Salary"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1e595228034a7b0ee760",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "AVG Balance"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0f2c6772b1ee8303ea22",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "AVG Credit Score"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

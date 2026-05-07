@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "cb7099a5581a24b05aba",
   "position": {
-    "x": 118.63639137961647,
-    "y": 232.72725885564628,
+    "x": 131.70731707317074,
+    "y": 214.63414634146343,
     "z": 10000,
-    "height": 240.90909090909091,
+    "height": 256.09756097560978,
     "width": 400,
     "tabOrder": 10000
   },
@@ -100,18 +100,35 @@
     "objects": {
       "dataPoint": [
         {
+          "properties": {}
+        },
+        {
           "properties": {
             "fill": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#F5ECC6'"
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculations"
+                        }
+                      },
+                      "Property": "Dummy Max Churn"
                     }
                   }
                 }
               }
             }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],
@@ -164,6 +181,13 @@
                       "Value": "'#D9D4BD'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -224,7 +248,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bf07597161a02437ab61",
+        "name": "7d4fa44b10b24802ed24",
         "field": {
           "Measure": {
             "Expression": {
@@ -238,7 +262,7 @@
         "type": "Advanced"
       },
       {
-        "name": "639880420e6a97949ca1",
+        "name": "351aa864042a5396e886",
         "field": {
           "Column": {
             "Expression": {
@@ -252,7 +276,7 @@
         "type": "Categorical"
       },
       {
-        "name": "7371ae9dc0da180c123e",
+        "name": "0b71779761059299ecb8",
         "field": {
           "Aggregation": {
             "Expression": {

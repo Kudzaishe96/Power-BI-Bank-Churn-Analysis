@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "826632bba40c7d080197",
   "position": {
-    "x": 652.72730047052551,
-    "y": 250.90907703746456,
+    "x": 623.07692307692321,
+    "y": 252.30767665765222,
     "z": 5000,
-    "height": 238.63636363636363,
-    "width": 259.09090909090907,
+    "height": 238.46153846153845,
+    "width": 258.97435897435895,
     "tabOrder": 5000
   },
   "visual": {
@@ -256,37 +256,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ccc4dae026b5644b0770",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "IsActiveMember"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6bf880204614c0ae00e2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculations"
-              }
-            },
-            "Property": "Total Male Churned Clients"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

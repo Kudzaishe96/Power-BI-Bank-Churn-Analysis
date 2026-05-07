@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "854bea06c426e449cb63",
   "position": {
-    "x": 1354.090881347656,
-    "y": 110.90909784490412,
+    "x": 1368.2926829268295,
+    "y": 187.80487804878049,
     "z": 4000,
-    "height": 88.63636363636364,
-    "width": 472.72727272727275,
+    "height": 90.2439024390244,
+    "width": 473.17073170731709,
     "tabOrder": 4000
   },
   "visual": {
@@ -168,23 +168,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "885dd0dbac793905275c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "Tenure"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

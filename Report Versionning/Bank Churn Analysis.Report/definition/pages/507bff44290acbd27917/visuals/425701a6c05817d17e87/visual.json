@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "425701a6c05817d17e87",
   "position": {
-    "x": 602.72730047052551,
-    "y": 525.90907703746439,
+    "x": 602.439024390244,
+    "y": 526.829268292683,
     "z": 8000,
-    "height": 518.18181818181813,
-    "width": 654.5454545454545,
+    "height": 482.92682926829269,
+    "width": 653.65853658536594,
     "tabOrder": 8000
   },
   "visual": {
@@ -181,7 +181,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "40L"
+                  "Value": "20L"
                 }
               }
             }
@@ -272,7 +272,7 @@
             "clusteredGapSize": {
               "expr": {
                 "Literal": {
-                  "Value": "23D"
+                  "Value": "25D"
                 }
               }
             }
@@ -305,6 +305,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'OutsideEnd'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -383,7 +390,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a0dda4c44dd3699dc0d4",
+        "name": "25ae29f2106da459208e",
         "field": {
           "Measure": {
             "Expression": {
@@ -397,7 +404,7 @@
         "type": "Advanced"
       },
       {
-        "name": "67bd9e9896038dd9c3b6",
+        "name": "61c7893a7b055116dfd3",
         "field": {
           "Measure": {
             "Expression": {
@@ -411,7 +418,7 @@
         "type": "Advanced"
       },
       {
-        "name": "67d46e1c2150cbd6e677",
+        "name": "b132e304a10f9b330f91",
         "field": {
           "Column": {
             "Expression": {
@@ -425,7 +432,7 @@
         "type": "Categorical"
       },
       {
-        "name": "d8dce5cd2322d0381809",
+        "name": "4fa20bf6b88f10f57c51",
         "field": {
           "Aggregation": {
             "Expression": {

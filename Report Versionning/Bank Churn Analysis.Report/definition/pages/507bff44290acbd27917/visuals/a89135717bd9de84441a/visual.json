@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "a89135717bd9de84441a",
   "position": {
-    "x": 1689.54551003196,
-    "y": 237.7272865988991,
+    "x": 1672.6828970560214,
+    "y": 288.78047291825447,
     "z": 9000,
-    "height": 131.81818181818181,
-    "width": 161.36363636363637,
+    "height": 134.14634146341464,
+    "width": 163.41463414634148,
     "tabOrder": 9000
   },
   "visual": {
@@ -227,23 +227,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fec9183051585ba1ddec",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Bank_Churn"
-              }
-            },
-            "Property": "IsActiveMember"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

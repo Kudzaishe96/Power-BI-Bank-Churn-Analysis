@@ -114,6 +114,21 @@ table Calculations
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Dummy Max Churn' =
+			
+			VAR MaxChurn =
+			    MAXX (
+			        ALL ( 'Age Catergory' ),
+			        [Churn Rate%]
+			    )
+			RETURN
+			IF (
+			    [Churn Rate%] = MaxChurn,
+			    "#F5ECC6",
+			    "#808080"
+			)
+		lineageTag: cc21c1fe-d122-4733-b4a1-e3c11556c020
+
 	partition Calculations = m
 		mode: import
 		source =

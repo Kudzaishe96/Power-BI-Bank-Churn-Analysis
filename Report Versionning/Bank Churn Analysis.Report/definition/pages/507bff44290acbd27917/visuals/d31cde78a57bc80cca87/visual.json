@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "d31cde78a57bc80cca87",
   "position": {
-    "x": 1353.6585365853659,
-    "y": 539.02439024390242,
+    "x": 1347.2464385567835,
+    "y": 546.62867793902285,
     "z": 2000,
-    "height": 470.73170731707319,
-    "width": 500.00000000000006,
+    "height": 471.16815337504994,
+    "width": 500.61616296099061,
     "tabOrder": 2000
   },
   "visual": {
@@ -156,14 +156,14 @@
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "45.99899353673891D"
+                  "Value": "45.949857239956316D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "3.4132208824157715D"
+                  "Value": "2.9890099789439546D"
                 }
               }
             },
@@ -222,6 +222,34 @@
                   "Value": "true"
                 }
               }
+            },
+            "autoZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "worldWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -251,6 +279,31 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {

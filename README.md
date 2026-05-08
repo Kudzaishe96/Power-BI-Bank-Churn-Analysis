@@ -62,7 +62,7 @@ The analysis is based on the Bank Churn dataset, provided as a CSV file located 
 ![Dashboard](image.png)
 
 ### *Dashboard Link*
-https://app.powerbi.com/view?r=eyJrIjoiZTEyNTg5NzUtNmNkMC00ZTU1LWFkNDEtMDdlYzhlZDUzNmVhIiwidCI6Ijc1NTE5MmU4LTBiYTAtNDNkMS04NDBhLTBhYjliY2JiOWY4ZSJ9&pageName=507bff44290acbd27917
+https://app.powerbi.com/groups/c9ae4b91-bb96-45d8-9538-2962748c6a42/reports/98be84dd-8a67-4257-9202-75220de70d87/06e3c6f40ced738c712b?experience=fabric-developer&clientSideAuth=0https://app.powerbi.com/groups/c9ae4b91-bb96-45d8-9538-2962748c6a42/reports/98be84dd-8a67-4257-9202-75220de70d87/06e3c6f40ced738c712b?experience=fabric-developer&clientSideAuth=0
 
 
 

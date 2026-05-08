@@ -43,9 +43,8 @@ The analysis is based on the Bank Churn dataset, provided as a CSV file located 
 1. Identify and count the number of Dimension Tables (Dim Tables) derived from the Fact Table (Bank Churn).
 2. Duplicate the Fact Table based on the identified number of Dimension Tables.
 3. Create the necessary Dimension Tables.
-4. Normalize the Fact Table and rename it to FactBank_Churn, then close Power Query.
-5. Navigate to the modeling page by clicking the leftmost option on the home tab.
-6. Establish a Snowflake model by creating relationships between the Fact Table and the Dimension Tables.
+4. Navigate to the modeling page by clicking the leftmost option on the home tab.
+5. Establish a Star schema model by creating relationships between the Fact Table and the Dimension Tables.
 7. Use the drag-and-drop method to define these relationships.
 
    ### *Relationship Model*
